@@ -100,7 +100,8 @@ body
 }
 .contactInfo ul li
 {
-    position: relative;
+    display: flex;          /* Active Flexbox */
+    align-items: center;    /* Aligne verticalement l’icône et le texte */
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
@@ -108,10 +109,15 @@ body
 
 .contactInfo ul li .icon
 {
-    display: inline-block;
     width: 30px;
     font-size: 18px;
     color: #03a9f4;
+    flex-shrink: 0;         /* Empêche l’icône de se réduire */
+}
+
+.contactInfo ul li .text {
+    color: #fff;
+    margin-left: 5px;       /* Petit espace entre l’icône et le texte */
 }
 .contactInfo ul li span
 {
